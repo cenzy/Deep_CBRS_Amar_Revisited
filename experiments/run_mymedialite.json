@@ -1,0 +1,73 @@
+{
+  "datasets": {
+    "dbbook": {
+      "train": [
+        "datasets/dbbook/ratings/train.tsv"
+      ],
+      "test": [
+        "datasets/dbbook/ratings/test.tsv"
+      ],
+      "predictions": "experiments/results/dbbook"
+    },
+    "ml1m": {
+      "train": [
+        "datasets/ml1m/ratings/u1.base",
+        "datasets/ml1m/ratings/u2.base",
+        "datasets/ml1m/ratings/u3.base",
+        "datasets/ml1m/ratings/u4.base",
+        "datasets/ml1m/ratings/u5.base"
+      ],
+      "test": [
+        "datasets/ml1m/ratings/u1.test",
+        "datasets/ml1m/ratings/u2.test",
+        "datasets/ml1m/ratings/u3.test",
+        "datasets/ml1m/ratings/u4.test",
+        "datasets/ml1m/ratings/u5.test"
+      ],
+      "predictions": "experiments/results/ml1m"
+    }
+  },
+  "strategies": {
+    "cutoff": [
+      5,
+      10,
+      15
+    ]
+  },
+  "algorithms": {
+    "UserKNN": {
+      "k": [
+        30,
+        50,
+        80
+      ]
+    },
+    "ItemKNN": {
+      "k": [
+        30,
+        50,
+        80
+      ]
+    },
+    "BPRMF": {
+      "num_factors": [
+        10,
+        30,
+        50
+      ]
+    },
+    "WRMF": {
+      "num_factors": [
+        10,
+        30,
+        50
+      ]
+    },
+    "BPRSLIM": {
+    },
+    "Random": {
+    },
+    "MostPopular": {
+    }
+  }
+}

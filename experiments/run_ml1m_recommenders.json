@@ -1,0 +1,61 @@
+{
+  "datasets": {
+    "ml1m_simple": {
+      "train": [
+        "datasets/ml1m/ratings/u1.base",
+        "datasets/ml1m/ratings/u2.base",
+        "datasets/ml1m/ratings/u3.base",
+        "datasets/ml1m/ratings/u4.base",
+        "datasets/ml1m/ratings/u5.base"
+      ],
+      "test": [
+        "datasets/ml1m/ratings/u1.test",
+        "datasets/ml1m/ratings/u2.test",
+        "datasets/ml1m/ratings/u3.test",
+        "datasets/ml1m/ratings/u4.test",
+        "datasets/ml1m/ratings/u5.test"
+      ],
+      "predictions": "experiments/results/ml1m/emb_simple_param",
+      "content": {
+        "word2vec": "datasets/ml1m/content/simple"
+      },
+      "embeddings": "resources/ml1m/embeddings/simple_param"
+    }
+  },
+  "strategies": {
+    "cutoff": [
+      5,
+      10,
+      15
+    ]
+  },
+  "algorithms": {
+    "word2vec": {
+      "method": [
+        "cbow",
+        "sg"
+      ],
+      "size": [
+        150,
+        300,
+        500
+      ],
+      "similarity": [
+        "cosine"
+      ],
+      "workers": [
+        6
+      ],
+      "window": [
+        2,
+        5,
+        10
+      ],
+      "min_count" : [
+        1,
+        3,
+        5
+      ]
+    }
+  }
+}

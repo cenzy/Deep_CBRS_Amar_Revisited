@@ -1,0 +1,52 @@
+{
+  "datasets": {
+    "dbbook_simple": {
+      "train": [
+        "datasets/dbbook/ratings/train.tsv"
+      ],
+      "test": [
+        "datasets/dbbook/ratings/test.tsv"
+      ],
+      "predictions": "experiments/results/dbbook/vsm_simple",
+      "content": {
+        "tfidf": "datasets/dbbook/content/simple"
+      },
+      "embeddings": ""
+    },
+    "ml1m_simple": {
+      "train": [
+        "datasets/ml1m/ratings/u1.base",
+        "datasets/ml1m/ratings/u2.base",
+        "datasets/ml1m/ratings/u3.base",
+        "datasets/ml1m/ratings/u4.base",
+        "datasets/ml1m/ratings/u5.base"
+      ],
+      "test": [
+        "datasets/ml1m/ratings/u1.test",
+        "datasets/ml1m/ratings/u2.test",
+        "datasets/ml1m/ratings/u3.test",
+        "datasets/ml1m/ratings/u4.test",
+        "datasets/ml1m/ratings/u5.test"
+      ],
+      "predictions": "experiments/results/ml1m/vsm_simple",
+      "content": {
+        "tfidf": "datasets/ml1m/content/simple"
+      },
+      "embeddings": ""
+    }
+  },
+  "strategies": {
+    "cutoff": [
+      5,
+      10,
+      15
+    ]
+  },
+  "algorithms": {
+    "tfidf": {
+      "similarity": [
+        "cosine"
+      ]
+    }
+  }
+}

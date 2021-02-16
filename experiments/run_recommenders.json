@@ -1,0 +1,124 @@
+{
+  "datasets": {
+    "dbbook_simple": {
+      "train": [
+        "datasets/dbbook/ratings/train.tsv"
+      ],
+      "test": [
+        "datasets/dbbook/ratings/test.tsv"
+      ],
+      "predictions": "experiments/results/dbbook/emb_simple",
+      "content": {
+        "word2vec": "datasets/dbbook/content/simple",
+        "doc2vec": "datasets/dbbook/content/simple",
+        "profile2vec": "datasets/dbbook/content/simple",
+        "vsm_w2v": "datasets/dbbook/content/simple",
+        "tfidf": "datasets/dbbook/content/simple"
+      },
+      "embeddings": "resources/dbbook/embeddings/simple"
+    },
+    "ml1m_simple": {
+      "train": [
+        "datasets/ml1m/ratings/u1.base",
+        "datasets/ml1m/ratings/u2.base",
+        "datasets/ml1m/ratings/u3.base",
+        "datasets/ml1m/ratings/u4.base",
+        "datasets/ml1m/ratings/u5.base"
+      ],
+      "test": [
+        "datasets/ml1m/ratings/u1.test",
+        "datasets/ml1m/ratings/u2.test",
+        "datasets/ml1m/ratings/u3.test",
+        "datasets/ml1m/ratings/u4.test",
+        "datasets/ml1m/ratings/u5.test"
+      ],
+      "predictions": "experiments/results/ml1m/emb_simple",
+      "content": {
+        "word2vec": "datasets/ml1m/content/simple",
+        "doc2vec": "datasets/ml1m/content/simple",
+        "profile2vec": "datasets/ml1m/content/simple",
+        "vsm_w2v": "datasets/ml1m/content/simple",
+        "tfidf": "datasets/ml1m/content/simple"
+      },
+      "embeddings": "resources/ml1m/embeddings/simple"
+    }
+  },
+  "strategies": {
+    "cutoff": [
+      5,
+      10,
+      15
+    ]
+  },
+  "algorithms": {
+    "word2vec": {
+      "method": [
+        "cbow",
+        "sg"
+      ],
+      "size": [
+        300,
+        500
+      ],
+      "similarity": [
+        "cosine"
+      ],
+      "workers": [
+        6
+      ]
+    },
+    "doc2vec": {
+      "method": [
+        "dm",
+        "dbow"
+      ],
+      "size": [
+        300,
+        500
+      ],
+      "similarity": [
+        "cosine"
+      ],
+      "workers": [
+        6
+      ]
+    },
+    "profile2vec": {
+      "method": [
+        "dm",
+        "dbow"
+      ],
+      "size": [
+        300,
+        500
+      ],
+      "similarity": [
+        "cosine"
+      ],
+      "workers": [
+        6
+      ]
+    },
+    "vsm_w2v": {
+      "method": [
+        "dm",
+        "dbow"
+      ],
+      "size": [
+        300,
+        500
+      ],
+      "similarity": [
+        "cosine"
+      ],
+      "workers": [
+        6
+      ]
+    },
+    "tfidf": {
+      "similarity": [
+        "cosine"
+      ]
+    }
+  }
+}

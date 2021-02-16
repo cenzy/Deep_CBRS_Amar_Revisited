@@ -1,0 +1,56 @@
+{
+  "datasets": {
+    "dbbook": {
+      "train": [
+        "datasets/dbbook/ratings/train.tsv"
+      ],
+      "test": [
+        "datasets/dbbook/ratings/test.tsv"
+      ],
+      "predictions": "experiments/results/dbbook/emb_simple/news",
+      "content": {
+        "word2vec_bin": "datasets/dbbook/content/simple"
+      },
+      "embeddings": "resources/external/embeddings/news"
+    },
+    "ml1m": {
+      "train": [
+        "datasets/ml1m/ratings/u1.base",
+        "datasets/ml1m/ratings/u2.base",
+        "datasets/ml1m/ratings/u3.base",
+        "datasets/ml1m/ratings/u4.base",
+        "datasets/ml1m/ratings/u5.base"
+      ],
+      "test": [
+        "datasets/ml1m/ratings/u1.test",
+        "datasets/ml1m/ratings/u2.test",
+        "datasets/ml1m/ratings/u3.test",
+        "datasets/ml1m/ratings/u4.test",
+        "datasets/ml1m/ratings/u5.test"
+      ],
+      "predictions": "experiments/results/ml1m/emb_simple/news",
+      "content": {
+        "word2vec_bin": "datasets/ml1m/content/simple"
+      },
+      "embeddings": "resources/external/embeddings/news"
+    }
+  },
+  "strategies": {
+    "cutoff": [
+      5,
+      10,
+      15
+    ]
+  },
+  "algorithms": {
+    "word2vec_bin": {
+      "size": [
+        300
+      ],
+      "similarity": [
+        "cosine"
+      ]
+    }
+  }
+}
+
